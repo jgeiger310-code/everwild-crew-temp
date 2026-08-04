@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a1f14">
+  <meta name="description" content="Temporary home for Jake, Sam & Brittany's Everwild page — story, photos, and good vibes coming soon.">
+  <meta property="og:title" content="Everwild · Jake, Sam & Brittany (temp)">
+  <meta property="og:description" content="A temporary page while we build the real one. Three of us, one festival, good energy.">
+  <meta property="og:image" content="assets/photos/crew.jpg">
+  <title>Everwild · Jake, Sam & Brittany · Temp Site</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a1f14;
+      --card: rgba(255, 249, 236, 0.95);
+      --ink: #14281c;
+      --forest: #123b27;
+      --leaf: #2d8a52;
+      --sun: #f0c14d;
+      --muted: #4a6354;
+      --line: rgba(255,255,255,0.16);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "DM Sans", system-ui, sans-serif;
+      color: #fff9ec;
+      background: var(--bg);
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background:
+        linear-gradient(165deg, rgba(10,31,20,.75) 0%, rgba(10,31,20,.88) 55%, rgba(10,31,20,.95) 100%),
+        url("assets/bg/night_stage.jpeg") center/cover no-repeat;
+    }
+    .wrap { width: min(880px, 92vw); margin: 0 auto; padding: 24px 0 64px; }
+    .banner {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(240,193,77,.18);
+      border: 1px solid rgba(240,193,77,.45);
+      color: var(--sun);
+      font-size: .85rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .hero {
+      margin-top: 18px;
+      padding: 36px 24px 28px;
+      border-radius: 28px;
+      background: var(--card);
+      color: var(--ink);
+      box-shadow: 0 28px 70px rgba(0,0,0,.35);
+      text-align: center;
+    }
+    .hero h1 {
+      font-family: Fraunces, Georgia, serif;
+      font-size: clamp(2rem, 6vw, 3.2rem);
+      line-height: 1.05;
+      margin: 14px 0 10px;
+      color: var(--forest);
+    }
+    .hero p {
+      margin: 0 auto;
+      max-width: 560px;
+      line-height: 1.65;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+    .names {
+      margin-top: 14px;
+      font-weight: 800;
+      color: var(--leaf);
+      font-size: 1.1rem;
+    }
+    .photo-wrap {
+      margin: 22px auto 0;
+      max-width: 640px;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 16px 40px rgba(18,59,39,.2);
+      border: 3px solid #fff;
+    }
+    .photo-wrap img {
+      display: block;
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
+    }
+    .photo-cap {
+      background: #edf5e6;
+      padding: 10px 14px;
+      font-size: .9rem;
+      font-weight: 600;
+      color: var(--forest);
+    }
+    .card {
+      margin-top: 18px;
+      padding: 24px 22px;
+      border-radius: 24px;
+      background: var(--card);
+      color: var(--ink);
+      box-shadow: 0 18px 48px rgba(0,0,0,.22);
+    }
+    .card h2 {
+      font-family: Fraunces, Georgia, serif;
+      margin: 0 0 12px;
+      color: var(--forest);
+      font-size: 1.55rem;
+      text-align: center;
+    }
+    .card p {
+      line-height: 1.7;
+      color: var(--muted);
+      margin: 0 0 12px;
+    }
+    .card p:last-child { margin-bottom: 0; }
+    .links {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 8px;
+    }
+    .btn {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      text-decoration: none;
+      padding: 14px 16px;
+      border-radius: 16px;
+      background: var(--forest);
+      color: #fff9ec;
+      border: 0;
+      cursor: pointer;
+      font: inherit;
+      text-align: left;
+      transition: transform .15s ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn strong { font-size: 1rem; }
+    .btn span { font-size: .88rem; opacity: .85; font-weight: 500; }
+    .btn.gold { background: linear-gradient(135deg, var(--sun), #e0a93a); color: #1a2f18; }
+    .btn.soft { background: #e8f2e2; color: var(--forest); }
+    .btn.muted { background: #dfe8db; color: #5a6f60; cursor: default; }
+    .music {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 8px;
+    }
+    .music button, .music a.playish {
+      appearance: none;
+      border: 0;
+      border-radius: 999px;
+      padding: 12px 20px;
+      font-weight: 800;
+      font-size: .95rem;
+      cursor: pointer;
+      background: var(--leaf);
+      color: white;
+      text-decoration: none;
+    }
+    .music a.playish.gold { background: var(--sun); color: #1a2f18; }
+    .note {
+      text-align: center;
+      font-size: .9rem;
+      color: var(--muted);
+      margin-top: 10px;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 28px;
+      font-weight: 600;
+      opacity: .9;
+      line-height: 1.6;
+      font-size: .95rem;
+    }
+    @media (max-width: 640px) {
+      .links { grid-template-columns: 1fr; }
+      .hero { padding: 28px 16px 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="banner">Temporary page · full site coming soon</div>
+
+    <header class="hero">
+      <h1>Everwild with<br>Jake, Sam &amp; Brittany</h1>
+      <p>
+        This is a <strong>temporary landing page</strong> while we finish the real one —
+        custom background, full story, more photos, Spotify, and our socials.
+      </p>
+      <p class="names">Jake · Sam · Brittany</p>
+      <figure class="photo-wrap">
+        <img src="assets/photos/crew.jpg" alt="Jake, Sam and Brittany at the festival" width="1200" height="800">
+        <figcaption class="photo-cap">Us at the festival · more photos coming</figcaption>
+      </figure>
+    </header>
+
+    <section class="card">
+      <h2>The short version (for now)</h2>
+      <p>
+        We went to Everwild together and left reminded how much good a festival can put into people.
+        We’re building a small page to share that energy — not an official festival site, just our crew
+        saying thanks and pointing people toward the good stuff.
+      </p>
+      <p>
+        <strong>Full story, cleaned photos, custom look, and social links will land here soon.</strong>
+        For now you’ve got a live link you can share while we build.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Music</h2>
+      <div class="music">
+        <button type="button" id="playBtn">▶ Play festival mix</button>
+        <a class="playish gold" id="spotifyBtn" href="#" role="button">Spotify (coming soon)</a>
+      </div>
+      <audio id="audio" loop preload="metadata" src="assets/audio/everwild-valley-festival-mix.mp3"></audio>
+      <p class="note">Tap play — phones won’t autoplay music until you do. Spotify link goes in when the track is ready.</p>
+    </section>
+
+    <section class="card">
+      <h2>Links</h2>
+      <div class="links">
+        <a class="btn gold" href="https://bgcc.store" target="_blank" rel="noopener">
+          <strong>Sam’s shop · bgcc.store</strong>
+          <span>Custom creations from Sam</span>
+        </a>
+        <a class="btn soft" href="https://www.everwildfestival.com/" target="_blank" rel="noopener">
+          <strong>Official Everwild</strong>
+          <span>Festival site (not us)</span>
+        </a>
+        <div class="btn muted">
+          <strong>Instagram</strong>
+          <span>Account not set up yet</span>
+        </div>
+        <div class="btn muted">
+          <strong>Facebook</strong>
+          <span>Account not set up yet</span>
+        </div>
+        <a class="btn" href="https://www.facebook.com/people/Delicate-Lace-Photography/100093677182929/" target="_blank" rel="noopener">
+          <strong>Delicate Lace Photography</strong>
+          <span>Photo credit / booking</span>
+        </a>
+        <a class="btn soft" href="mailto:jgeiger310@gmail.com?subject=Everwild%20/%20Photo%20booking">
+          <strong>Contact Jake</strong>
+          <span>Book or questions</span>
+        </a>
+      </div>
+    </section>
+
+    <div class="footer">
+      Temp site for Jake, Sam &amp; Brittany<br>
+      Not affiliated with Everwild Festival · full version coming soon ✨
+    </div>
+  </div>
+
+  <script>
+    const audio = document.getElementById('audio');
+    const btn = document.getElementById('playBtn');
+    btn.addEventListener('click', async () => {
+      try {
+        if (audio.paused) {
+          await audio.play();
+          btn.textContent = '❚❚ Pause';
+        } else {
+          audio.pause();
+          btn.textContent = '▶ Play festival mix';
+        }
+      } catch (e) {
+        alert('Tap play again if your browser blocked audio.');
+      }
+    });
+    document.getElementById('spotifyBtn').addEventListener('click', (e) => {
+      e.preventDefault();
+      alert('Spotify link will go here when the track/account is ready.');
+    });
+  </script>
+</body>
+</html>
