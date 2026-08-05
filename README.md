@@ -1,19 +1,20 @@
-# Wildly Better Together — Everwild Crew
+# Wildly Better Together
 
-**Separate project** from the Everwild Good Vibes Hub / Hidden Grove site.
+A personal website for Brittany, Sam, and Jake to share photos, memories, music, handmade creations, and ways to connect.
 
 ## Live URL
 
 https://jgeiger310-code.github.io/everwild-crew-temp/
 
-## What’s here
+## Current site content
 
-Polished static redesign from `everwild_site_redesign.zip`:
-
-- Tree of Life themed background (`assets/images/tree-of-life-bg.webp`)
-- Full story + crew cards + vibe sections
-- Real social / music / photo links
-- Featured festival crew photo: `assets/photos/crew.jpg`
+- Custom Tree of Life background
+- Our Story and individual crew introductions
+- Existing crew photo at `assets/photos/crew.jpg`
+- Instagram section for Jake’s festival photos, copy requests, and edit requests
+- Facebook, Spotify, and Delicate Lace Photography links
+- Expanded section for Sam’s shop and custom orders
+- Contact form for comments, questions, photo requests, and custom-order questions
 
 ## Links
 
@@ -22,17 +23,18 @@ Polished static redesign from `everwild_site_redesign.zip`:
 - Spotify: https://open.spotify.com/artist/3q0lanC2SZJSFUHILKSDZj
 - Delicate Lace: https://delicatelacephotography.mypixieset.com/
 - Sam’s shop: https://bgcc.store
-- Contact: jgeiger310@gmail.com
+- Contact: everwildlybettertogether@gmail.com
 
-## Local path
+## Contact form
+
+The static GitHub Pages site uses FormSubmit to forward form messages to `everwildlybettertogether@gmail.com`.
+
+FormSubmit requires a one-time activation for a new email address. Submit the form once, then open the activation email sent by FormSubmit and approve it. After activation, new questions and comments will be delivered to the inbox.
+
+## Deployment
+
+Pushes to `main` trigger the GitHub Pages workflow in `.github/workflows/pages.yml`.
+
+## Local path recorded by the original setup
 
 `/Users/jakegeiger/Documents/Codex/everwild-crew-temp/`
-
-## Deploy
-
-Push `main` — GitHub Pages workflow in `.github/workflows/pages.yml`.
-
-## Not this
-
-- Not `everwild-good-vibes-hub`
-- Not MASICS / legal work
